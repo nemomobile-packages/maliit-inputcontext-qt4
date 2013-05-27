@@ -1,0 +1,3 @@
+[submodule "maliit-inputcontext-qt4"]
+	path = maliit-inputcontext-qt4
+	url = git://gitorious.org/maliit/maliit-inputcontext-qt4.git
