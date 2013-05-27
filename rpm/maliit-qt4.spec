@@ -25,6 +25,7 @@ BuildRequires:  pkgconfig(libudev)
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xext)
 Obsoletes:   maliit-framework < 0.99
+Obsoletes:   libmaliit
 
 %description
 Qt4 support for Maliit 1.0, including libmaliit and Qt4 input context

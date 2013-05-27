@@ -21,6 +21,7 @@ PkgConfigBR:
     - xext
 Obsoletes:
     - maliit-framework < 0.99
+    - libmaliit
 SetupOptions: -q -n %{name}-%{version}/maliit-inputcontext-qt4
 Configure: none
 Builder: qmake
