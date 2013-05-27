@@ -1,0 +1,49 @@
+Name: maliit-qt4
+Summary: Qt4 support for Maliit
+Version: 0.99.0+git1.6948f2e52c45c5
+Release: 1
+Group: System/Libraries
+License: LGPLv2.1
+URL: http://gitorious.org/maliit/maliit-inputcontext-qt4
+SetupOptions: -q -n %{name}-0.99.0
+Sources:
+    - "%{name}-%{version}.tar.bz2"
+
+Description: |
+    Qt4 support for Maliit 1.0, including libmaliit and Qt4 input context
+Requires:
+    - dbus-x11
+PkgConfigBR:
+    - QtGui
+    - dbus-glib-1
+    - libudev
+    - x11
+    - xext
+Obsoletes:
+    - maliit-framework < 0.99
+SetupOptions: -q -n %{name}-%{version}/maliit-inputcontext-qt4
+Configure: none
+Builder: qmake
+Files:
+    - "%{_libdir}/qt4/plugins/inputmethods/libmaliit-qt4.so"
+    - "%{_libdir}/libmaliit-1.0.so*"
+    - "%{_libdir}/libmaliit-connection.so*"
+    - "%{_libdir}/libmaliit-settings.so*"
+
+SubPackages:
+    - Name: devel
+      Summary: Maliit Framework Input Method library development files
+      Group: Development/Libraries
+      Description: | 
+          Development files for the additional Maliit API library
+      Files:
+          - "%{_includedir}/maliit-qt4/"
+          - "%{_libdir}/pkgconfig/*"
+
+    - Name: tests
+      Summary: Maliit Qt4 Tests Package
+      Group: Development/Libraries
+      Description: |
+          Tests for Maliit Qt4 integration
+      Files:
+          - "%{_libdir}/maliit-framework-tests/"
