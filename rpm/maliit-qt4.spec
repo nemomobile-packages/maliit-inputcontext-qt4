@@ -35,6 +35,7 @@ Qt4 support for Maliit 1.0, including libmaliit and Qt4 input context
 Summary:    Maliit Framework Input Method library development files
 Group:      Development/Libraries
 Requires:   %{name} = %{version}-%{release}
+Obsoletes:  libmaliit-devel < 0.99
 
 %description devel
 Development files for the additional Maliit API library

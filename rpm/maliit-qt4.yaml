@@ -37,6 +37,8 @@ SubPackages:
       Group: Development/Libraries
       Description: | 
           Development files for the additional Maliit API library
+      Obsoletes:
+          - libmaliit-devel < 0.99
       Files:
           - "%{_includedir}/maliit-qt4/"
           - "%{_libdir}/pkgconfig/*"
